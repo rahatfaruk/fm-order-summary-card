@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frontend Mentor | Order Summary Card</title>
+
+  <!-- favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png">
+  <!-- custom font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <!-- tailwind css -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "pale-blue": "hsl(225, 100%, 94%)",
+            "bright-blue": "hsl(245, 75%, 52%)",
+            "very-pale-blue": "hsl(225, 100%, 98%)",
+            "desaturated-blue": "hsl(224, 23%, 55%)",
+            "dark-blue": "hsl(223, 47%, 23%)",
+          },
+          fontFamily: {
+            "red-hat-display": ["Red Hat Display", "sans-serif"]
+          }
+        },
+      },
+    }
+  </script>
+</head>
+
+<body>
+  <div
+    class="py-8 px-6 min-h-screen flex flex-col gap-6 bg-pale-blue bg-[url('./images/pattern-background-mobile.svg')] md:bg-[url('./images/pattern-background-desktop.svg')] bg-no-repeat bg-contain bg-top font-red-hat-display">
+    <header>
+      <h1 class="text-2xl text-center font-semibold">Order Summary Card</h1>
+    </header>
+
+    <main class="flex-1 flex justify-center items-center p-6">
+      <!-- order card -->
+      <div class="max-w-sm bg-white shadow-xl rounded-2xl">
+        <figure>
+          <img src="./images/illustration-hero.svg" class="w-full h-full object-cover rounded-t-2xl"
+            alt="listening music" />
+        </figure>
+
+        <div class="p-6 text-center">
+          <h3 class="text-dark-blue font-bold text-2xl">Order Summary</h3>
+          <p class="mt-4 text-desaturated-blue">You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
+
+          <div class="flex gap-4 mt-4 p-4 bg-very-pale-blue border rounded-xl">
+            <img src="./images/icon-music.svg" alt="" />
+            <div class="flex-1 text-left">
+              <h4 class="font-bold text-dark-blue">Annual Plan</h4>
+              <p class="text-desaturated-blue">$59.99/year</p>
+            </div>
+            <button class="text-bright-blue font-semibold underline hover:opacity-80 hover:no-underline transition-opacity">Change</button>
+          </div>
+
+          <div class="mt-6">
+            <button class="py-2.5 px-4 w-full rounded-lg bg-bright-blue text-white font-semibold shadow-xl shadow-bright-blue/20 hover:opacity-80 transition-opacity">Proceed to Payment</button>
+            <button class="font-semibold mt-6 text-desaturated-blue hover:text-dark-blue transition-colors">Cancel Order</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- footer: attribution -->
+    <footer class="p-4 text-gray-500 text-sm text-center">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" class="text-sky-800 hover:underline" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://rahatfaruk.vercel.app" class="text-sky-800 hover:underline">Rahat Faruk</a>.
+    </footer>
+  </div>
+</body>
+
+</html>
